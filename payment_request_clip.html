@@ -112,7 +112,7 @@
       function createBitmap(alphaType, width, vtable) {
         console.log("createBitmap alphaType=" + alphaType + ", width=" + width + ", vtable=" + vtable);
         let data = new ArrayBuffer(width * width * 4);
-        console.log("data=" + data);
+        // console.log("data=" + data);
         if (vtable !== undefined) {
           let view = new BigUint64Array(data);
           // console.log("view=" + view);
@@ -171,7 +171,9 @@
           console.log("step2");
           createClipboards(1, clipboards);
           sleep(2000);
+          console.log("window.location.href=" + window.location.href);
           let addr = BigInt(window.location.href.substring(addrIdx + 5));
+          console.log("addr=" + addr);
           if (addr == 0) {
             window.location = reloadUrl;
           }
