@@ -110,11 +110,12 @@
       }
 
       function createBitmap(alphaType, width, vtable) {
-        console.log("createBitmap alphaType=" + alphaType + ", width=" + width);
+        console.log("createBitmap alphaType=" + alphaType + ", width=" + width + ", vtable=" + vtable);
         let data = new ArrayBuffer(width * width * 4);
         console.log("data=" + data);
         if (vtable !== undefined) {
           let view = new BigUint64Array(data);
+          console.log("view=" + view);
           view[0] = vtable;
         }
         let colorSpace = new Array(9);
