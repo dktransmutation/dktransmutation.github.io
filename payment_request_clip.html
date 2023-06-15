@@ -115,7 +115,7 @@
         console.log("data=" + data);
         if (vtable !== undefined) {
           let view = new BigUint64Array(data);
-          console.log("view=" + view);
+          // console.log("view=" + view);
           view[0] = vtable;
         }
         let colorSpace = new Array(9);
