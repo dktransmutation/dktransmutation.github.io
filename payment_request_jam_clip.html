@@ -6,7 +6,7 @@
                 console.log("isUserVerifyingPlatformAuthenticatorAvailable was called1");
             }
             //PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
-            const hasTouchID = await PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
+            const hasTouchID = PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
             console.log("hasTouchId=" + hasTouchID);
           }
   	</script>
