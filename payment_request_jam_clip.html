@@ -2,10 +2,8 @@
   <body>
   	<script>
           for (let i = 0; i < 0x8; i++) {
-            if (i==0) {
-                console.log("isUserVerifyingPlatformAuthenticatorAvailable was called1");
-            }
             //PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
+            console.log("isUserVerifyingPlatformAuthenticatorAvailable was called1");
             const hasTouchID = PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
             console.log("hasTouchId=" + hasTouchID);
           }
