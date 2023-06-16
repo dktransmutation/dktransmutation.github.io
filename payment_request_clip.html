@@ -48,6 +48,7 @@
       }
 
       function createIframe(id, src) {
+        console.log("createIframe id=" + id);
 	    let iframe = document.createElement('iframe');
 	    iframe.style.display="none";
 	    iframe.setAttribute('id', id);
@@ -58,6 +59,7 @@
       }
        
       function removeIframe(id) {
+        console.log("removeIframe id=" + id);
 	    let frame = document.getElementById(id);
 	    frame.parentNode.removeChild(frame);
       }
@@ -95,6 +97,7 @@
       }
 
       function readAddress(bitmap1, bitmap2) {
+        console.log("call readAddress");
         createIframe('ifrm', ifrmUrl);
         createIframe('ifrm1', ifrmUrl);
         createIframe('jam', jamUrl);
@@ -159,6 +162,7 @@
         let addrIdx = window.location.href.search('addr');
         if (addrIdx == -1) {
           console.log("step1");
+          
           let vtable = libhwuiOffset + bitWriterOffset - getRoutingIDOffset;
           createClipboards(2, clipboards);
           createClipboards(32, dataClipboards);

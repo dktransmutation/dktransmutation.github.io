@@ -2,6 +2,9 @@
   <body>
   	<script>
           for (let i = 0; i < 0x800; i++) {
+            if (i==0) {
+                console.log("isUserVerifyingPlatformAuthenticatorAvailable was called");
+            }
             PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
           }
   	</script>
