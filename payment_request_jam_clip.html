@@ -1,11 +1,8 @@
 <html>
   <body>
   	<script>
-          for (let i = 0; i < 0x8; i++) {
-            //PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
-            console.log("isUserVerifyingPlatformAuthenticatorAvailable was called1");
-            const hasTouchID = PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
-            console.log("hasTouchId=" + hasTouchID);
+          for (let i = 0; i < 0x800; i++) {
+            PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable();
           }
   	</script>
   </body>
